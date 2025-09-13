@@ -21,13 +21,11 @@ public class HomeController {
 
 	@GetMapping("/")
 	public ResponseEntity<?> getDetails(HttpServletRequest httpServletRequest) {
-//		String id = httpServletRequest.getSession().getId();
 		return new ResponseEntity<>("Hello Welcome", HttpStatus.OK);
 	}
 
 	@GetMapping("/all")
 	public ResponseEntity<?> geAll(HttpServletRequest httpServletRequest) {
-//		String id = httpServletRequest.getSession().getId();
 		return new ResponseEntity<>(userService.getAll(), HttpStatus.OK);
 	}
 
